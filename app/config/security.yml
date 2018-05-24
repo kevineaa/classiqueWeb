@@ -1,0 +1,28 @@
+security:
+    encoders:
+        AppBundle\Entity\Abonne:
+            algorithm: plaintext
+
+    providers:
+        classique_web:
+            entity:
+                class: AppBundle:Abonne
+                property: login
+
+    firewalls:
+    
+
+        main:
+            
+            pattern:    ^/
+            http_basic: ~
+            provider: classique_web
+
+
+        login: 
+            anonymous:  ~
+            pattern: /abonne/new
+            http_basic: ~
+
+    access_control:
+        - { path: /abonne/new, role: IS_AUTHENTICATED_ANONYMOUSLY }

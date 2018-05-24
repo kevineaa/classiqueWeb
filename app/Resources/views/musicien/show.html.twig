@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Musicien</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Codemusicien</th>
+                <td>{{ musicien.codeMusicien }}</td>
+            </tr>
+            <tr>
+                <th>Nommusicien</th>
+                <td>{{ musicien.nomMusicien }}</td>
+            </tr>
+            <tr>
+                <th>Prenommusicien</th>
+                <td>{{ musicien.prenomMusicien }}</td>
+            </tr>
+            <tr>
+                <th>Anneenaissance</th>
+                <td>{{ musicien.anneeNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Anneemort</th>
+                <td>{{ musicien.anneeMort }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ musicien.photo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('musicien_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('musicien_edit', { 'codeMusicien': musicien.codeMusicien }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
