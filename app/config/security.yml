@@ -13,16 +13,7 @@ security:
     
 
         main:
-            
-            pattern:    ^/
-            http_basic: ~
-            provider: classique_web
-
-
-        login: 
             anonymous:  ~
-            pattern: /abonne/new
-            http_basic: ~
-
-    access_control:
-        - { path: /abonne/new, role: IS_AUTHENTICATED_ANONYMOUSLY }
+            form_login:
+                login_path: login
+                check_path: login
