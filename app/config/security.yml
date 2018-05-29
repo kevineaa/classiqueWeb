@@ -20,4 +20,4 @@ security:
 
             pattern:    ^/
             http_basic: ~
-            provider: our_db_provider
+            provider: classique_web
