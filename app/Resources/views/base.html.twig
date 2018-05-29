@@ -7,6 +7,15 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+          <div id="sidebar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">login</a></li> 
+                <li><a href="/abonne">abonne</a></li>             
+                <li><a href="/musicien">musicien</a></li>             
+            
+            </ul>
+        </div>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
