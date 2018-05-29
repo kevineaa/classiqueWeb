@@ -24,7 +24,7 @@ class SecurityController extends Controller
       /**
      * @Route("/login", name="login")
      */
-  /* public function login(Request $request, AuthenticationUtils $authenticationUtils)
+  public function login(Request $request, AuthenticationUtils $authenticationUtils)
 {
     // get the login error if there is one
     $error = $authenticationUtils->getLastAuthenticationError();
@@ -36,7 +36,7 @@ class SecurityController extends Controller
         'last_username' => $lastUsername,
         'error'         => $error,
     ));
-}  */
+}   /*
  public function loginAction(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         // 1) build the form
@@ -67,5 +67,5 @@ class SecurityController extends Controller
             array('form' => $form->createView())
         );
     }
-  
+  */
 }
